@@ -17,7 +17,12 @@ function App() {
 
   return (
     <div className="min-h-screen  bg-linear-to-r from-gray-400 via-purple-300 to-blue-200 p-6 rounded-xl shadow-xl text-black">
-      <h3 className=" txt-2xl font-semibold text-center mb-4 ">Contact Manager</h3>
+      <h3 className="text-4xl font-bold text-center mb-6
+      text-black  backdrop-blur-md
+       py-3 rounded-xl shadow-lg">
+     Contact Manager
+     </h3>
+
       <ContactForm fetchContacts={fetchContacts} />
       <ContactList contacts={contacts} fetchContacts={fetchContacts} />
     </div>
