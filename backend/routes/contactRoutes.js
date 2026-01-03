@@ -20,8 +20,13 @@ router.get("/", async (req, res) => {
 
 // DELETE (Bonus)
 router.delete("/:id", async (req, res) => {
-  await Contact.findByIdAndDelete(req.params.id);
-  res.json({ message: "Contact deleted" });
+  try {
+    await Contact.findByIdAndDelete(req.params.id);
+    res.json({ message: "Contact deleted" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
+
 
 module.exports = router;

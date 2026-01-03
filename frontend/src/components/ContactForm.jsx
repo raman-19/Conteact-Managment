@@ -26,7 +26,7 @@ export default function ContactForm({ fetchContacts }) {
     setError("");
 
     // Submit the form
-    await fetch("http://localhost:5000/api/contacts", {
+    await fetch("api/contacts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

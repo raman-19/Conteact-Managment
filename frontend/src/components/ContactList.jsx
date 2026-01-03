@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactList({ contacts, fetchContacts }) {
   const deleteContact = async (id) => {
-    await fetch(`http://localhost:5000/api/contacts/${id}`, {
+    await fetch(`api/contacts/${id}`, {
       method: "DELETE",
     });
     fetchContacts();
